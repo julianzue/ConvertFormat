@@ -19,7 +19,9 @@ def convert():
 
     inline = content.replace("\n", "")
 
-    lines = inline.replace(" | ", "\n")
+    nospaces = inline.replace(" ", "")
+
+    lines = nospaces.replace("|", "\n")
 
     with open("result.txt", "w") as file:
         file.write(lines)
